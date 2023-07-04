@@ -1,2 +1,4 @@
 .env
 node_modules
+mochawesome-report/mochawesome.html
+mochawesome-report/mochawesome.json
