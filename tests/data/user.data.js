@@ -1,14 +1,14 @@
-export const VALID_CREATE_TOKEN = {
+export const CREATE_TOKEN_WITH_VALID_DATA = {
   username: "admin",
   password: "password123",
 };
 
-export const INVALID_CREATE_TOKEN_WITHOUT_USERNAME = {
+export const CREATE_TOKEN_WITHOUT_USERNAME = {
   username: "",
   password: "password123",
 };
 
-export const INVALID_CREATE_TOKEN_WITHOUT_PASSWORD = {
+export const CREATE_TOKEN_WITHOUT_PASSWORD = {
   username: "admin",
   password: "",
 };
