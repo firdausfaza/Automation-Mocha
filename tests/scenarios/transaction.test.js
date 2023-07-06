@@ -39,4 +39,21 @@ describe("Transaction Data Test ", () => {
       firstName
     );
   });
+
+  it("Ensure update booking api is successfully working", async () => {
+    const responseUpdateBooking = await restfulBooker.updateBooking(
+      bookingId,
+      data.UPDATE_BOOKING
+    );
+    assert.equal(responseUpdateBooking.status, 200);
+    assert.containsAllKeys(responseUpdateBooking.data, ["firstname"]);
+    assert.equal(
+      responseUpdateBooking.data.firstname,
+      data.UPDATE_BOOKING.firstname
+    );
+  });
+  it("Ensure delete booking api is successfully working", async () => {
+    const responseDeleteBooking = await restfulBooker.deleteBooking(bookingId);
+    assert.equal(responseDeleteBooking.status, 201);
+  });
 });

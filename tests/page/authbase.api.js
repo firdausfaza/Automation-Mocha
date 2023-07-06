@@ -1,6 +1,6 @@
 import axios from "axios";
 import dotenv from "dotenv";
-import restfulBooker from "$root/page/restful";
+import restfulBooker from "$root/page/restful.api";
 import * as data from "$root/data/user.data";
 
 dotenv.config();

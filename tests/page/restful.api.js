@@ -1,5 +1,4 @@
 import BaseAPI from "$root/page/base.api";
-import { update } from "cypress/types/lodash";
 import authBaseAPI from "$root/page/authbase.api";
 
 const restfulBooker = {
@@ -10,8 +9,10 @@ const restfulBooker = {
   getBooking: (bookingId) => BaseAPI.get(`/booking/${bookingId}`),
   getBookingByFirstName: (firstName) =>
     BaseAPI.get("/booking/?firstname=" + firstName),
-  updateBooking: (bookingId, data) =>
-    authBaseAPI.put(`/booking/${bookingId}`, data),
+  updateBooking: async (param, data) =>
+    (await authBaseAPI()).put("/booking/" + param, data),
+  deleteBooking: async (param) =>
+    (await authBaseAPI()).delete("/booking/" + param),
 };
 
 export default restfulBooker;
