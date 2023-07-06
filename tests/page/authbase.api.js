@@ -7,7 +7,7 @@ dotenv.config();
 
 const authBaseAPI = async () => {
   const responseCreateToken = await restfulBooker.createToken(
-    data.VALID_CREATE_TOKEN
+    data.CREATE_TOKEN_WITH_VALID_DATA
   );
   return axios.create({
     baseURL: process.env.BASE_URL,
